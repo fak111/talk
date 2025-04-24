@@ -27,6 +27,7 @@
 .ai-era-hero .container {
     position: relative;
     z-index: 2;
+    padding: 2rem;
 }
 
 .ai-era-hero h1 {
@@ -39,7 +40,15 @@
 .ai-era-hero h2 {
     font-size: 2rem;
     font-weight: 500;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.ai-era-hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
     margin-bottom: 2rem;
+    max-width: 700px;
     opacity: 0.9;
 }
 
@@ -51,6 +60,14 @@
 .comparison-section {
     padding: 6rem 0;
     background-color: var(--bg-color);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    margin: 3rem 0;
+    align-items: center;
 }
 
 .section-title {
@@ -319,6 +336,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -343,12 +361,66 @@
     animation-delay: 0.6s;
 }
 
+/* 页脚样式 */
+footer {
+    background: var(--footer-bg);
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
 /* 响应式设计 */
 @media (max-width: 992px) {
     .era-comparison-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .transition-arrow {
         transform: rotate(90deg);
         margin: 1rem 0;
@@ -359,15 +431,15 @@
     .ai-era-hero h1 {
         font-size: 2.5rem;
     }
-    
+
     .ai-era-hero h2 {
         font-size: 1.5rem;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .features-grid,
     .impact-grid,
     .analogy-grid {

@@ -1,140 +1,225 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 2.0时代特征 - AI技术革新</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>AI 2.0时代特征 - AI时代的探索与应用</title>
+    <link rel="stylesheet" href="../css/modern-style.css">
+    <link rel="stylesheet" href="../css/ai-era-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="探索AI 2.0时代的特征与变革，从被动响应到主动代理，AI技术革新正在重塑我们的未来">
 </head>
 
-<body>
+<body data-theme="light">
+    <div class="page-transition"></div>
+
     <header>
-        <nav>
+        <nav class="main-nav">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>AI时代探索</span>
+            </div>
             <ul>
                 <li><a href="../index.html">首页</a></li>
                 <li><a href="ai-writing.html">AI辅助写作</a></li>
-                <li><a href="metaso.html">Metaso产品</a></li>
+                <li><a href="metaso-product.html">Metaso产品</a></li>
                 <li><a href="ai-2-era.html" class="active">AI 2.0时代</a></li>
                 <li><a href="ai-agent.html">AI Agent实例</a></li>
-                <li><a href="platform.html">平台集成</a></li>
+                <li><a href="https://aci.dev">Aci平台集成</a></li>
                 <li><a href="resources.html">资源分享</a></li>
-                <li><a href="offline-exchange.html">线下交流</a></li>
             </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>AI 2.0时代特征</h1>
-            <p class="subtitle">从被动响应到主动代理，AI技术革新正在重塑我们的未来</p>
+        <section class="ai-era-hero">
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>AI 2.0时代特征</h1>
+                    <h2>从被动响应到主动代理，AI技术革新正在重塑我们的未来</h2>
+                    <p>AI 2.0时代标志着人工智能从单纯的工具转变为具有自主思考和行动能力的智能体，这一转变将深刻影响我们的工作和生活方式。</p>
+                </div>
+            </div>
         </section>
 
-        <section class="content">
-            <div class="comparison-grid">
-                <div class="era-card">
-                    <h2>AI 1.0</h2>
-                    <div class="era-features">
-                        <ul>
-                            <li>以模型为中心</li>
-                            <li>被动响应式交互</li>
-                            <li>单一任务处理</li>
-                            <li>有限的上下文理解</li>
-                            <li>需要明确的人工指令</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="transition-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                <div class="era-card">
-                    <h2>AI 2.0</h2>
-                    <div class="era-features">
-                        <ul>
-                            <li>以Agent为中心</li>
-                            <li>主动思考与行动</li>
-                            <li>多任务协同处理</li>
-                            <li>深度上下文理解</li>
-                            <li>自主决策与执行</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <section id="comparison" class="comparison-section">
+            <div class="container">
+                <h2 class="section-title">AI 1.0 VS AI 2.0</h2>
+                <p class="section-subtitle">从被动响应到主动代理，AI技术正在经历范式转变</p>
 
-            <div class="analogy">
-                <h2>简单类比理解</h2>
-                <div class="analogy-content">
-                    <div class="analogy-item">
-                        <i class="fas fa-cogs"></i>
-                        <div>
-                            <h3>AI 1.0 = 引擎</h3>
-                            <p>就像一个强大的引擎，需要专业人士才能操作和维护</p>
+                <div class="comparison-grid">
+                    <div class="era-card ai1 animate-fade-in delay-1">
+                        <h3><i class="fas fa-robot"></i>AI 1.0</h3>
+                        <div class="era-features">
+                            <ul>
+                                <li>以人类偏好为中心</li>
+                                <li>被动响应式交互</li>
+                                <li>单一静态的环境</li>
+                                <li>有限的上下文理解</li>
+                                <li>需要明确的人工指令</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="analogy-item">
-                        <i class="fas fa-car"></i>
-                        <div>
-                            <h3>AI 2.0 = 完整的汽车</h3>
-                            <p>像一辆现代汽车，人人都能轻松使用，具备完整的功能体系</p>
+                    <div class="transition-arrow animate-fade-in delay-2">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="era-card ai2 animate-fade-in delay-3">
+                        <h3><i class="fas fa-brain"></i>AI 2.0</h3>
+                        <div class="era-features">
+                            <ul>
+                                <li>以模型成长为中心</li>
+                                <li>主动思考与行动</li>
+                                <li>多任务协同处理</li>
+                                <li>复杂动态的环境</li>
+                                <li>自主决策与执行</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>自主性</h3>
-                    <p>能够独立思考、规划和执行任务，无需持续人工干预</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>主动思考</h3>
-                    <p>不仅回答问题，还能主动发现问题并提出解决方案</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3>上下文理解</h3>
-                    <p>深度理解场景和需求，提供更精准的解决方案</p>
+        <section class="analogy-section">
+            <div class="container">
+                <h2 class="section-title">简单类比理解</h2>
+                <p class="section-subtitle">通过日常生活中的例子，直观理解model与agent的区别</p>
+
+                <div class="analogy-grid">
+                    <div class="analogy-card animate-fade-in">
+                        <div class="analogy-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="analogy-title">model = 引擎</h3>
+                        <p>就像一个强大的引擎，需要专业人士才能操作和维护，功能强大但使用门槛高</p>
+                    </div>
+                    <div class="analogy-card animate-fade-in delay-1">
+                        <div class="analogy-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="analogy-title">agent = 完整的汽车</h3>
+                        <p>像一辆现代汽车，人人都能轻松使用，具备完整的功能体系，能够自主完成复杂任务</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <i class="fas fa-flask"></i>
-                    <h3>科研创新</h3>
-                    <p>加速科学发现，自主设计实验方案</p>
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">AI 2.0核心特性</h2>
+                <p class="section-subtitle">探索AI 2.0时代的关键能力与技术突破</p>
+
+                <div class="features-grid">
+                    <div class="feature-card animate-fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="feature-title">自主性</h3>
+                        <p>能够独立思考、规划和执行任务，无需持续人工干预</p>
+                    </div>
+                    <div class="feature-card animate-fade-in delay-1">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="feature-title">主动思考</h3>
+                        <p>不仅回答问题，还能主动发现问题并提出解决方案</p>
+                    </div>
+                    <div class="feature-card animate-fade-in delay-2">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="feature-title">动态的环境</h3>
+                        <p>环境会随着模型变化而变化</p>
+                    </div>
                 </div>
-                <div class="impact-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>教育变革</h3>
-                    <p>个性化学习助手，智能教学规划</p>
-                </div>
-                <div class="impact-card">
-                    <i class="fas fa-edit"></i>
-                    <h3>内容创作</h3>
-                    <p>智能创作伙伴，提升创作效率</p>
-                </div>
-                <div class="impact-card">
-                    <i class="fas fa-code"></i>
-                    <h3>软件开发</h3>
-                    <p>自动化编程，智能代码生成</p>
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <div class="container">
+                <h2 class="section-title">AI 2.0的影响领域</h2>
+                <p class="section-subtitle">AI 2.0将如何改变各个行业和领域</p>
+
+                <div class="impact-grid">
+                    <div class="impact-card animate-fade-in">
+                        <div class="impact-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3 class="impact-title">科研创新</h3>
+                        <p>加速科学发现，自主设计实验方案</p>
+                    </div>
+                    <div class="impact-card animate-fade-in delay-1">
+                        <div class="impact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="impact-title">教育变革</h3>
+                        <p>个性化学习助手，智能教学规划</p>
+                    </div>
+                    <div class="impact-card animate-fade-in delay-2">
+                        <div class="impact-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3 class="impact-title">内容创作</h3>
+                        <p>智能创作伙伴，提升创作效率</p>
+                    </div>
+                    <div class="impact-card animate-fade-in delay-3">
+                        <div class="impact-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="impact-title">软件开发</h3>
+                        <p>自动化编程，智能代码生成</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="quick-links">
-            <h3>快速链接</h3>
-            <ul>
-                <li><a href="https://www.shlab.org.cn/" target="_blank">上海人工智能实验室</a></li>
-                <li><a href="https://www.way2agile.cn/" target="_blank">Way2AGI</a></li>
-                <li><a href="resources.html">更多资源</a></li>
-            </ul>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="https://aci.dev">Aci平台集成</a></li>
+                        <li><a href="resources.html">资源分享</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="https://www.shlab.org.cn/" target="_blank">上海人工智能实验室</a></li>
+                        <li><a href="https://www.way2agile.cn/" target="_blank">Way2AGI</a></li>
+                        <li><a href="resources.html">更多资源</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="https://space.bilibili.com/1617153613?spm_id_from=333.1369.0.0" target="_blank"><i
+                                    class="fab fa-bilibili"></i> Bilibili</a></li>
+                        <li><a href="https://github.com/fak111/" target="_blank"><i class="fab fa-github"></i>
+                                GitHub</a></li>
+                        <li><a href="https://x.com/DerbZhuli0411" target="_blank"><i class="fab fa-x-twitter"></i> X</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI时代探索. Powered by ACI.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="../js/modern.js"></script>
+    <script src="../js/scroll-animations.js"></script>
 </body>
 
 </html>
