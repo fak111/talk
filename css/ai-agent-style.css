@@ -1,0 +1,240 @@
+/* AI Agent页面特定样式 */
+
+/* Hero区域 */
+.agent-hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0 4rem;
+}
+
+.agent-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pattern.svg');
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.agent-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.agent-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.agent-hero h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+/* Agent展示部分 */
+.agent-showcase-section {
+    padding: 6rem 0;
+    background-color: var(--bg-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.agent-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.agent-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.agent-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.agent-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.agent-title {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.agent-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.agent-image-container {
+    margin: 2rem 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.agent-image-container:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.agent-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.agent-link {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.agent-link i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.agent-link a {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.agent-link a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.agent-prompt {
+    background: rgba(var(--gradient-start-rgb), 0.05);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.agent-prompt h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.agent-prompt p {
+    margin: 0;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+/* 动画 */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .agent-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .agent-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .agent-hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .agent-card {
+        padding: 1.5rem;
+    }
+}

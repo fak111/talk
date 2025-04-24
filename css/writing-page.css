@@ -1,0 +1,302 @@
+/* AI辅助写作页面特定样式 */
+
+/* Hero区域 */
+.writing-hero {
+    background: linear-gradient(135deg, rgba(0, 113, 227, 0.8) 0%, rgba(245, 99, 0, 0.8) 100%);
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pattern.svg');
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* 工作流部分 */
+.workflow-section {
+    padding: 6rem 0;
+    background-color: var(--bg-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.workflow-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.workflow-image {
+    flex: 1;
+    text-align: center;
+}
+
+.xiaohongshu-img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.xiaohongshu-img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.workflow-steps {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.workflow-step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.workflow-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.step-number {
+    background: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.step-content p {
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+/* 痛点部分 */
+.pain-points-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, rgba(var(--gradient-start-rgb), 0.05) 0%, rgba(var(--gradient-end-rgb), 0.05) 100%);
+}
+
+/* 案例研究部分 */
+.case-study-section {
+    padding: 6rem 0;
+    background-color: var(--bg-color);
+}
+
+.case-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.case-image {
+    flex: 1;
+    text-align: center;
+}
+
+.wechat-img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.wechat-img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.case-details {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.case-details h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.case-details ol {
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.case-details li {
+    margin-bottom: 0.5rem;
+}
+
+.results-box {
+    background: rgba(var(--gradient-start-rgb), 0.1);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+.results-box h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.results-box ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.results-box li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.results-box i {
+    color: var(--accent-color);
+}
+
+/* 工具部分 */
+.tools-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, rgba(var(--gradient-start-rgb), 0.05) 0%, rgba(var(--gradient-end-rgb), 0.05) 100%);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tool-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tool-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.tool-card h3 {
+    margin-bottom: 1rem;
+}
+
+.tool-card p {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.tool-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.tool-link:hover {
+    color: var(--accent-color);
+}
+
+.tool-link::after {
+    content: '→';
+    transition: var(--transition);
+}
+
+.tool-link:hover::after {
+    transform: translateX(5px);
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+    .workflow-container {
+        flex-direction: row;
+    }
+    
+    .case-content {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .workflow-step {
+        padding: 1rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+}
