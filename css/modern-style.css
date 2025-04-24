@@ -1,0 +1,506 @@
+:root {
+    --primary-color: #0071e3;
+    --secondary-color: #6e6e73;
+    --accent-color: #f56300;
+    --text-color: #1d1d1f;
+    --bg-color: #ffffff;
+    --card-bg: #f5f5f7;
+    --header-bg: rgba(255, 255, 255, 0.8);
+    --footer-bg: #f5f5f7;
+    --gradient-start: #a960ee;
+    --gradient-end: #ff8a00;
+    --gradient-start-rgb: 169, 96, 238;
+    --gradient-end-rgb: 255, 138, 0;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+    --border-radius: 12px;
+}
+
+[data-theme="dark"] {
+    --primary-color: #2997ff;
+    --secondary-color: #86868b;
+    --accent-color: #ff9f0a;
+    --text-color: #f5f5f7;
+    --bg-color: #1d1d1f;
+    --card-bg: #2c2c2e;
+    --header-bg: rgba(29, 29, 31, 0.8);
+    --footer-bg: #2c2c2e;
+    --gradient-start: #2997ff;
+    --gradient-end: #ff9f0a;
+    --gradient-start-rgb: 41, 151, 255;
+    --gradient-end-rgb: 255, 159, 10;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    transition: var(--transition);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    transform: rotate(30deg);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/pattern.svg');
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.intro {
+    max-width: 700px;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: white;
+    color: var(--primary-color);
+}
+
+.btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Overview Section */
+.overview {
+    padding: 6rem 0;
+    background-color: var(--bg-color);
+}
+
+.overview h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.overview h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.learn-more {
+    margin-top: auto;
+    color: var(--primary-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.learn-more:hover {
+    color: var(--accent-color);
+}
+
+.learn-more::after {
+    content: '→';
+    transition: var(--transition);
+}
+
+.learn-more:hover::after {
+    transform: translateX(5px);
+}
+
+/* Footer */
+footer {
+    background: var(--footer-bg);
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+/* Page Transitions */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 9999;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.page-transition.active {
+    transform: translateY(0);
+}
+
+/* 特性盒子样式 */
+.feature-box {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.feature-box i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.feature-box h3 {
+    margin-bottom: 1rem;
+}
+
+.feature-box p {
+    color: var(--secondary-color);
+}
+
+/* 特性部分 */
+.features {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, rgba(var(--gradient-start-rgb), 0.05) 0%, rgba(var(--gradient-end-rgb), 0.05) 100%);
+}
+
+/* 导航栏滚动效果 */
+header.scrolled .main-nav {
+    padding: 0.5rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+header.nav-hidden {
+    transform: translateY(-100%);
+}
+
+/* 动画状态 */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 导入移动端菜单样式 */
+@import url('menu.css');
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
